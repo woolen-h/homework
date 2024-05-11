@@ -17,11 +17,17 @@ main {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .login-form {
+    margin: 60px 20px 0;
+  }
+}
 .login-form {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 60px 20px 0;
 }
 .login-form input {
   width: inherit;
@@ -75,11 +81,5 @@ main {
 @media (max-width: 768px) {
   .login-form .login-form-bottom .login-ip {
     display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .login-form {
-    margin: 60px 20px 0;
   }
 }/*# sourceMappingURL=naver.css.map */

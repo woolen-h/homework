@@ -18,7 +18,6 @@ main {
     margin: 0 auto;
   }
 }
-.login-form-bottom {
   .login-form {
     width: 100%;
     display: flex;
@@ -27,22 +26,73 @@ main {
     
     input {
       width: inherit;
+      padding: .75rem 1rem;
+      font-size: 14px;
+      height: 45px;
+      border: 1px solid #dadada;
+      background-color: #fff;
 
       &:focus,
       &:focus-visible {
         border: 2px solid #24388d;
+        background-color: #e9f0fd;
         outline: 0;
+        margin-left: -1px;
+      }
+
+      &:nth-child(2) {
+        margin-top: .5rem;
       }
     }
-    .login-keep {
+    .login-btn {
+      height: 45px;
+      margin-top: 20px;
+      color: #fff;
+      background-color: #03cf5d;
+      border: 0;
+    }
+    .login-form-bottom {
       display: flex;
       justify-content: space-between;
+      margin-top: 10px;
+      line-height: 1rem;
+
+      .login-keep {
+        display: flex;
+
+        .login-keep-checkbox {
+          height: auto;
+          display: none;
+
+          + label {
+          
+            &.check-icon {
+              width: 24px;
+              height: 24px;
+              line-height: 1.4rem;
+              background: url(./icons/unchecked.svg);
+              margin-right: 5px;
+            }
+
+            &.check-text {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        .login-ip {
+          display: none;
+        }
+      }
     }
   }
-}
 
 @media (max-width: 768px) {
   .login-form {
-    margin: 0 20px;
+    margin: 60px 20px 0;
   }
 }

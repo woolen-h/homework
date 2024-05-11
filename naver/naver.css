@@ -17,26 +17,69 @@ main {
   margin: 0 auto;
 }
 
-.login-form-bottom .login-form {
+.login-form {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.login-form-bottom .login-form input {
+.login-form input {
   width: inherit;
+  padding: 0.75rem 1rem;
+  font-size: 14px;
+  height: 45px;
+  border: 1px solid #dadada;
+  background-color: #fff;
 }
-.login-form-bottom .login-form input:focus, .login-form-bottom .login-form input:focus-visible {
+.login-form input:focus, .login-form input:focus-visible {
   border: 2px solid #24388d;
+  background-color: #e9f0fd;
   outline: 0;
+  margin-left: -1px;
 }
-.login-form-bottom .login-form .login-keep {
+.login-form input:nth-child(2) {
+  margin-top: 0.5rem;
+}
+.login-form .login-btn {
+  height: 45px;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #03cf5d;
+  border: 0;
+}
+.login-form .login-form-bottom {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
+  line-height: 1rem;
+}
+.login-form .login-form-bottom .login-keep {
+  display: flex;
+}
+.login-form .login-form-bottom .login-keep .login-keep-checkbox {
+  height: auto;
+  display: none;
+}
+.login-form .login-form-bottom .login-keep .login-keep-checkbox + label.check-icon {
+  width: 24px;
+  height: 24px;
+  line-height: 1.4rem;
+  background: url(./icons/unchecked.svg);
+  margin-right: 5px;
+}
+.login-form .login-form-bottom .login-keep .login-keep-checkbox + label.check-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .login-form .login-form-bottom .login-ip {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   .login-form {
-    margin: 0 20px;
+    margin: 60px 20px 0;
   }
 }/*# sourceMappingURL=naver.css.map */

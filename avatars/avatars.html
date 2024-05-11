@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- <title> 정보가 Document로 제공되고 있음. 눈에 보이는 <body> 영역 이외에도 신경을 쓰기 바람. -->
+    <title>User Connection State</title>
     <link rel="stylesheet" href="./reset.css" />
     <link
       rel="stylesheet"
@@ -13,41 +14,46 @@
   </head>
   <body>
     <main>
+      <!-- float과 flex는 하나의 마크업을 바탕으로 배치해야 함. -->
       <section class="flex">
+        <!-- 제목을 제공한 점 Good! -->
         <h1>Flex 속성을 이용한 레이아웃</h1>
+        <!-- 다만 Avatars라는 <button> 마크업의 존재가 의아함. 어떤 용도인지 ? -->
         <button type="button">Avatars</button>
         <section class="box">
           <div class="row">
-            <div class="profile off">
+            <!-- 마크업에 상태를 알 수 있는 정보가 제공되고 있지 않음. -->
+            <div class="profile off" aria-label="offline">
+              <!-- 이미지에 대체텍스트를 제공할 때 이미지라는 정보른 제공하지 않아야 함. 스크린리더는 콘텑츠 이미지를 읽을 때 alt 속성값과 함께 이미지라는 정보를 읽어줌 -->
               <img src="../images/faces/face1.jpg" alt="프로필 이미지" />
             </div>
-            <div class="profile on">
+            <div class="profile on" aria-label="online">
               <img src="../images/faces/face2.png" alt="프로필 이미지" />
             </div>
-            <div class="profile off">
+            <div class="profile off" aria-label="offline">
               <img src="../images/faces/face4.webp" alt="프로필 이미지" />
             </div>
-            <div class="profile on">
+            <div class="profile on" aria-label="online">
               <img src="../images/faces/face4.jpeg" alt="프로필 이미지" />
             </div>
           </div>
           <div class="row">
-            <div class="profile on">
+            <div class="profile on" aria-label="online">
               <img src="../images/faces/face5.webp" alt="프로필 이미지" />
             </div>
-            <div class="profile on">
+            <div class="profile on" aria-label="online">
               <img src="../images/faces/face6.jpeg" alt="프로필 이미지" />
             </div>
-            <div class="profile off">
+            <div class="profile off" aria-label="offline">
               <img src="../images/faces/face7.jpeg" alt="프로필 이미지" />
             </div>
-            <div class="profile off">
+            <div class="profile off" aria-label="offline">
               <img src="../images/faces/face8.jpeg" alt="프로필 이미지" />
             </div>
           </div>
         </section>
       </section>
-      <section class="flex-wrap">
+      <!-- <section class="flex-wrap">
         <h1>Flex-Wrap 속성을 이용한 레이아웃</h1>
         <button type="button">Avatars</button>
         <section class="box">
@@ -78,7 +84,7 @@
             </div>
           </div>
         </section>
-      </section>
+      </section> -->
       <section class="float">
         <h1>Float 속성을 이용한 레이아웃</h1>
         <button type="button">Avatars</button>

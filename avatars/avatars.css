@@ -23,11 +23,8 @@ h1 {
   border: 1px solid #dbdbdb;
   border-radius: 2px;
   background: linear-gradient(90deg, rgba(221,221,221,0) 0%, rgba(221,221,221,.3) 100%);
-  padding: 60px;
-}
-
-.row {
-  margin-bottom: 20px;
+  padding: 20px;
+  /* 과제에서 padding 값은 20px로 적용할 것을 요청했으나 지켜지지 않음. */
 }
 
 .flex .row {
@@ -49,6 +46,10 @@ h1 {
   flex-wrap: wrap;
 }
 
+.flex-wrap .row .profile:nth-child(n-5) {
+  flex-wrap: wrap;
+}
+
 .float .row {
   height: 64px;
 }
@@ -63,7 +64,9 @@ h1 {
   float: left;
 }
 
-.row:last-child {
+.row:last-child,
+.row:last-child .profile,
+.row:last-child:not(:only-child) {
   margin-bottom: 0;
 }
 
@@ -87,6 +90,7 @@ h1 {
   margin-bottom: 0;
 }
 
+/* ::after 가상 요소레 상태 정보를 제공할 경우 스크린리더는 이를 인식할 수 없음 */
 .profile::after {
   content: '';
   position: absolute;

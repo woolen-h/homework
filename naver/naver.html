@@ -6,17 +6,19 @@
     <title>[Naver] Login</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./nomalize.css" />
-    <link rel="stylesheet" href="./naver.css" />
+    <link rel="stylesheet" href="./layout.css" />
   </head>
   <body>
+    <section class="logo">
+      <h1>
+        <img src="./logo.svg" alt="네이버" />
+      </h1>
+    </section>
     <main>
-      <section class="logo">
-        <img src="./logo.svg" alt="네이버 로고" />
-      </section>
       <section class="login-form">
         <input
           class="login-id"
-          type="text"
+          type="email"
           name="login-id"
           id="login-id"
           placeholder="아이디(이메일)"
@@ -28,7 +30,6 @@
           id="login-pw"
           placeholder="비밀번호"
         />
-        <button class="login-btn" type="submit">로그인</button>
         <div class="login-form-bottom">
           <div class="login-keep">
             <input
@@ -37,16 +38,20 @@
               name="login-keep-checkbox"
               id="login-keep-checkbox"
             />
-            <label class="check-icon" for="login-keep-checkbox"></label>
             <label class="check-text" for="login-keep-checkbox">
               로그인 상태유지
             </label>
           </div>
           <div class="login-ip">
-            <label for="login-ip-btn">ip 보안</label>
-            <button type="button" name="login-ip-btn">on/off</button>
+            <label for="login-ip-btn"
+              ><a href="http://" target="_blank" rel="noopener noreferrer"
+                >ip 보안</a
+              ></label
+            >
+            <input type="checkbox" name="login-ip-btn" id="" />
           </div>
         </div>
+        <button class="login-btn" type="submit">로그인</button>
       </section>
     </main>
   </body>

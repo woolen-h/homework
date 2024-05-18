@@ -11,4 +11,3 @@
 Markdown 파일로 바로가기
 </a>
 </section>
-<iframe src="https://github.com/woolen-h/homework/blob/main/apple/apple.md" width="100%"></iframe>

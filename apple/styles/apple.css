@@ -1,0 +1,182 @@
+@import url(theme.css);
+@import url(reset.css);
+@import url(base.css);
+
+/* 카드 레이아웃 */
+.card {
+  display: grid;
+  justify-items: center;
+  align-content: flex-start;
+  width: 100%;
+  height: var(--size);
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: grid;
+    row-gap: var(--small-spacing);
+    column-gap: var(--small-spacing);
+    grid-template-columns: repeat(auto-fill, minmax(50%, 50%));
+  }
+
+  section {
+    grid-column: auto / span 2;
+  }
+  section:nth-child(n+4) {
+    grid-column: auto / span 1;
+  }
+  
+  .card {
+    padding-top: var(--extra-large-spacing);
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    padding-top: var(--large-spacing);
+  }
+}
+
+/* 카드 스타일 */
+.card {
+  background-repeat: no-repeat;
+  background-position: bottom 40% left 50%;
+}
+
+.ipad-pro .card {
+  background-image: url(../products/ipad_pro.jpeg);
+}
+
+.ipad-air .card {
+  background-image: url(../products/ipad_air.jpeg);
+  background-color: #ADDBEE;
+}
+
+.iphone-15pro .card {
+  background-image: url(../products/iphone15_pro.jpeg);
+}
+
+.iphone-15 .card {
+  background-image: url(../products/iphone15.jpeg);
+}
+
+.watch .card {
+  background-image: url(../products/apple_watch.jpeg);
+}
+
+.macbook-air .card {
+  background-image: url(../products/macbook_air.jpeg);
+}
+
+.airpod-pro .card {
+  background-image: url(../products/airpods_pro.jpeg);
+}
+
+.card h1 {
+  font-weight: bold;
+}
+
+.card h3 {
+  margin-top: var(--small-spacing);
+  line-height: var(--line-normal);
+  text-align: center;
+}
+
+.card p {
+  margin-top: var(--small-spacing);
+  line-height: var(--line-normal);
+  font-size: var(--small-text);
+  color: var(--gray);
+}
+
+.card.dark {
+  color: var(--white);
+  background-color: #000;
+}
+
+.card.white {
+  background-color: var(--white);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--small-spacing);
+}
+
+.btn-group button:last-child {
+  margin-left: var(--small-spacing);
+}
+
+.btn {
+  border: 0;
+  border-radius: 3rem;
+  padding: var(--x-small-spacing);
+}
+
+.btn-blue {
+  background-color: var(--blue-400);
+  color: var(--white);
+}
+
+.btn-ol-blue {
+  border: 1px solid var(--blue-100);
+  background-color: transparent;
+  color: var(--blue-100);
+}
+
+.btn-black {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn-ol-black {
+  border: 1px solid var(--black);
+  background-color: transparent;
+  color: var(--black);
+}
+
+/* 모바일 */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: var(--large-text);
+  }
+  h3 {
+    font-size: var(--base-text);
+  }
+  .btn-group button {
+    font-size: var(--xx-small-text);
+  }
+  .ipad-air .card {
+    background-position: bottom 75% left 50%;
+  }
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: var(--extra-large-text);
+  }
+  h3 {
+    font-size: var(--medium-text);
+  }
+  .btn-group button {
+    font-size: var(--x-small-text);
+  }
+  .card {
+    background-position: bottom 60% left 50%;
+  }
+  .ipad-air .card {
+    background-position: bottom 75% left 50%;
+  }
+  .iphone-15pro .card {
+    background-position: bottom 75% left 50%;
+  }
+  .macbook-air .card {
+    background-position: bottom 95% left 50%;
+  }
+  .airpod-pro .card {
+    background-position: bottom 50% left 50%;
+  }
+}

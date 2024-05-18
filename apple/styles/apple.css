@@ -10,6 +10,7 @@
   width: 100%;
   height: var(--size);
   background-size: cover;
+  row-gap: var(--small-spacing);
 }
 
 @media (min-width: 1024px) {
@@ -78,13 +79,11 @@
 }
 
 .card h3 {
-  margin-top: var(--small-spacing);
   line-height: var(--line-normal);
   text-align: center;
 }
 
 .card p {
-  margin-top: var(--small-spacing);
   line-height: var(--line-normal);
   font-size: var(--small-text);
   color: var(--gray);
@@ -102,7 +101,6 @@
 .btn-group {
   display: flex;
   justify-content: center;
-  margin-top: var(--small-spacing);
 }
 
 .btn-group button:last-child {

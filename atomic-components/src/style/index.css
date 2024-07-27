@@ -1,3 +1,90 @@
+@charset "UTF-8";
+/* 스타일 초기화 */
+h1, h2, h3, h4, h5, h6 {
+  font: inherit;
+  font-size: 1em;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+p, figure {
+  margin: 0;
+}
+
+input, textarea, select, option, button {
+  font: inherit;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.App h1 {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #dab3ff;
+  border: 1px solid rgba(189, 118, 255, 0.5);
+  color: #fff;
+}
+.App .container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px 0;
+  gap: 10px;
+  position: relative;
+}
+.App .container::after {
+  content: "•••";
+  color: #d14dff;
+  position: absolute;
+  left: 50%;
+  bottom: -13px;
+  display: block;
+}
+.App .container .section {
+  flex: auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.App .container .section h2 {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(189, 118, 255, 0.05);
+  border: 1px solid rgba(189, 118, 255, 0.3);
+  font-weight: 500;
+}
+.App .container .section .group {
+  display: flex;
+  gap: 10px;
+}
+
 .App {
   text-align: center;
 }
@@ -66,6 +153,40 @@
   border-color: #e1e1e1;
 }
 
+.label {
+  text-align: left;
+  min-width: 140px;
+  font-weight: 600;
+}
+.label-important {
+  position: relative;
+}
+.label-important::after {
+  content: "*";
+  position: absolute;
+  color: #ef0000;
+  top: 5px;
+  right: -10px;
+}
+.label-search {
+  position: relative;
+}
+.label-search::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  margin: 0 20px;
+  background-image: url(/public/icon/icon-search.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
 .input {
   padding: 12px 20px;
   border: 1px solid #a6a6a6;
@@ -110,8 +231,27 @@
 .input-warning::placeholder {
   color: #eb6e32;
 }
+.input-search {
+  font-weight: 400;
+  border-color: #5f0080;
+}
+.input-search:hover {
+  border-color: #0066ff;
+  transition: all 0.5s ease;
+}
+.input-search:focus {
+  border-color: #5f0080;
+  outline: 2px solid #5f0080;
+}
+.input-small {
+  max-height: 18px;
+}
+.input-large {
+  min-height: 24px;
+}
 
 body {
+  background-color: rgba(189, 118, 255, 0.15);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,24 +1,90 @@
 import React from "react";
-import Input from "./Input";
+import { Input, InputLabel } from "./Input";
 import Button from "./Button";
 import "./style/index.css";
 
 function App() {
   return (
     <div className="App">
-      <div className="input-container">
-        <h2>Input</h2>
-        <Input status="default" placeholder="Placeholder" />
-        <Input status="success" placeholder="성공적으로 완료했습니다!" />
-        <Input status="error" placeholder="에러가 발생했습니다!" />
-        <Input status="warning" placeholder="주의사항을 전달합니다." />
+      <h1>Button</h1>
+      <div className="container">
+        <div className="section">
+          <h2>Outline</h2>
+          <div className="group">
+            <Button label="Default" status="default" styles="outline" />
+            <Button
+              label="Disabled"
+              status="disabled"
+              styles="outline"
+              disabled
+            />
+          </div>
+        </div>
+        <div className="section">
+          <h2>Solid</h2>
+          <div className="group">
+            <Button label="Default" status="default" styles="solid" />
+            <Button
+              label="Disabled"
+              status="disabled"
+              styles="solid"
+              disabled
+            />
+          </div>
+        </div>
       </div>
-      <div className="button-container">
-        <h2>Button</h2>
-        <Button label="Default" status="default" styles="outline" />
-        <Button label="Disabled" status="disabled" styles="outline" disabled />
-        <Button label="Default" status="default" styles="solid" />
-        <Button label="Disabled" status="disabled" styles="solid" disabled />
+      <h1>Input</h1>
+      <div className="container">
+        <div className="section">
+          <h2>Size</h2>
+          <div className="group">
+            <Input
+              status="default"
+              size="small"
+              placeholder="Placeholder"
+              label="Label"
+              labelClass="important"
+            />
+            <Input
+              status="default"
+              size="large"
+              placeholder="Placeholder"
+              label="Label"
+              labelClass="important"
+            />
+          </div>
+        </div>
+        <div className="section">
+          <h2>State</h2>
+          <div className="group">
+            <Input
+              status="success"
+              placeholder="성공적으로 완료했습니다!"
+              label="Label"
+            />
+            <Input
+              status="error"
+              placeholder="에러가 발생했습니다!"
+              label="Label"
+            />
+            <Input
+              status="warning"
+              placeholder="주의사항을 전달합니다."
+              label="Label"
+            />
+          </div>
+        </div>
+        <div className="section">
+          <h2>Search</h2>
+          <div className="group">
+            <InputLabel
+              type="search"
+              placeholder="검색어를 입력하세요."
+              label="Label"
+              labelClass="search"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

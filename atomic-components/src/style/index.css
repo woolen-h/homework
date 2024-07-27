@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.button {
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid #5f0080;
+  color: #5f0080;
+}
+.button-outline:hover:not(.button-disabled) {
+  background-color: #5f0080;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.button-outline.button-disabled {
+  color: #e1e1e1;
+  border-color: #e1e1e1;
+}
+.button-solid {
+  background-color: #5f0080;
+  color: #fff;
+}
+.button-solid:hover:not(.button-disabled) {
+  background-color: #bd76ff;
+  border-color: #bd76ff;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.button-solid.button-disabled {
+  background-color: #e1e1e1;
+  border-color: #e1e1e1;
+}
+
+.input {
+  padding: 12px 20px;
+  border: 1px solid #a6a6a6;
+  border-radius: 4px;
+}
+.input::-moz-placeholder {
+  color: #898989;
+}
+.input::placeholder {
+  color: #898989;
+}
+.input:focus {
+  outline-color: #333;
+}
+.input-success {
+  border: 2px solid #008900;
+  color: #008900;
+}
+.input-success::-moz-placeholder {
+  color: #008900;
+}
+.input-success::placeholder {
+  color: #008900;
+}
+.input-error {
+  border: 2px solid #ef0000;
+  color: #ef0000;
+}
+.input-error::-moz-placeholder {
+  color: #ef0000;
+}
+.input-error::placeholder {
+  color: #ef0000;
+}
+.input-warning {
+  border: 2px solid #eb6e32;
+  color: #eb6e32;
+}
+.input-warning::-moz-placeholder {
+  color: #eb6e32;
+}
+.input-warning::placeholder {
+  color: #eb6e32;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

@@ -1,0 +1,36 @@
+.input {
+  padding: 12px 20px;
+  border: 1px solid $gray300;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: $gray400;
+  }
+  &:focus {
+    outline-color: $black;
+  }
+  &-success {
+    border: 2px solid $successColor;
+    color: $successColor;
+
+    &::placeholder {
+      color: $successColor;
+    }
+  }
+  &-error {
+    border: 2px solid $errorColor;
+    color: $errorColor;
+
+    &::placeholder {
+      color: $errorColor;
+    }
+  }
+  &-warning {
+    border: 2px solid $warningColor;
+    color: $warningColor;
+
+    &::placeholder {
+      color: $warningColor;
+    }
+  }
+}

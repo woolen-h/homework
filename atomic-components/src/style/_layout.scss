@@ -11,7 +11,7 @@
 
   h1 {
     @include box;
-    padding: 20px;
+    padding: 10px;
     font-size: 20px;
     font-weight: 600;
     background-color: lighten($secondaryColor, 12%);

@@ -35,6 +35,9 @@
     - button에 정의한 스타일, 상태를 map 메서드로 group 컴포넌트 안에 뿌려주었습니다.
     - 처음엔 map 메서드를 생각을 못해서 App.js에 input과 마찬가지로 한땀한땀 button을 넣다가 아 이게 아닌데...? 싶어져서 수정하였습니다 ㅎ
 
+- Build
+  - 현재 (07/28) Netlify 빌드 관련 오류가 있어 확인 중
+
 ## 🎥 <span style="color:#303030;">스크린샷</span>
 
 ![과제 스크린샷](image.png)

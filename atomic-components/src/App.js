@@ -1,38 +1,12 @@
 import React from "react";
-import { Input, InputLabel } from "./Input";
-import Button from "./Button";
+import { Input, InputLabel } from "./Input.js";
+import ButtonGroup from "./ButtonGroup.js";
 import "./style/index.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Button</h1>
-      <div className="container">
-        <div className="section">
-          <h2>Outline</h2>
-          <div className="group">
-            <Button label="Default" status="default" styles="outline" />
-            <Button
-              label="Disabled"
-              status="disabled"
-              styles="outline"
-              disabled
-            />
-          </div>
-        </div>
-        <div className="section">
-          <h2>Solid</h2>
-          <div className="group">
-            <Button label="Default" status="default" styles="solid" />
-            <Button
-              label="Disabled"
-              status="disabled"
-              styles="solid"
-              disabled
-            />
-          </div>
-        </div>
-      </div>
+      <ButtonGroup />
       <h1>Input</h1>
       <div className="container">
         <div className="section">

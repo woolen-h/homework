@@ -14,16 +14,26 @@
 - Layout Page
 
   - App.js
+    - InputGroup과 ButtonGroup을 각각 import 하였습니다.
   - Container.js
+    - 레이아웃의 큰 틀을 담당합니다. ButtonGroup과 InputGroup을 나눠주는 역할을 합니다.
   - Section.js
+    - 레이아웃의 흰 박스 역할입니다. 각 상태 및 스타일, 사이즈 별 컴포넌트를 분리합니다.
   - Group.js
+    - 내부 컴포넌트 뷰 박스입니다. flex-flow를 사용하여 wrap 속성을 가질 수 있도록 하였습니다.
 
 - Components
 
   - Input.js
+    - input의 사이즈, 상태별 클래스를 정의하였습니다.
   - InputGroup.js
+    - input에 정의한 사이즈, 상태를 map 메서드로 group 컴포넌트 안에 뿌려주었습니다.
+    - 처음엔 map 메서드를 생각을 못해서 App.js에 한땀한땀 input을 넣다가 아 이게 아닌데...? 싶어져서 수정하였습니다 ㅎ
   - Button.js
+    - button의 스타일, 상태별 클래스를 정의하였습니다.
   - ButtonGroup.js
+    - button에 정의한 스타일, 상태를 map 메서드로 group 컴포넌트 안에 뿌려주었습니다.
+    - 처음엔 map 메서드를 생각을 못해서 App.js에 input과 마찬가지로 한땀한땀 button을 넣다가 아 이게 아닌데...? 싶어져서 수정하였습니다 ㅎ
 
 ## 🎥 <span style="color:#303030;">스크린샷</span>
 

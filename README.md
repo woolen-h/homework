@@ -22,6 +22,6 @@ README 파일로 바로가기
 
 ## Atomic Components
 
-<a href="/">
+<a href="https://github.com/woolen-h/homework/blob/f039e8be77d674b1689a8b324a4fa6e879592864/atomic-components/atomic-component.md">
 README 파일로 바로가기
 </a>

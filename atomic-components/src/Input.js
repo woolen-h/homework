@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style/index.css";
 
 export function Input({ status, placeholder, size }) {
-  const [value, setValue] = useState("");
-
   const getStatusClass = () => {
     switch (status) {
       case "default":
@@ -21,13 +19,22 @@ export function Input({ status, placeholder, size }) {
     }
   };
 
+  const getSizeClass = () => {
+    switch (size) {
+      case "small":
+        return "input-small";
+      case "large":
+        return "input-large";
+      default:
+        return "";
+    }
+  };
+
   return (
     <input
       type="text"
-      className={`input ${getStatusClass()} input-${size}`}
-      value={value}
+      className={`input ${getStatusClass()} ${getSizeClass()}`}
       placeholder={placeholder}
-      onChange={(e) => setValue(e.target.value)}
     />
   );
 }

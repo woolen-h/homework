@@ -1,6 +1,7 @@
 .label {
   text-align: left;
   min-width: 140px;
+  width: 100%;
   font-weight: 600;
 
   &-important {
@@ -74,6 +75,7 @@
   }
 
   &-search {
+    width: 100%;
     font-weight: 400;
     border-color: $primaryColor;
 
@@ -85,6 +87,12 @@
     &:focus {
       border-color: $primaryColor;
       outline: 2px solid $primaryColor;
+    }
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
     }
   }
 
